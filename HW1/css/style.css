@@ -1,0 +1,68 @@
+/* Gaya dasar untuk elemen */  
+body {  
+    background-color: #dedede; /* Warna latar belakang */  
+    font-family: Arial, sans-serif; /* Font dasar untuk seluruh halaman */  
+    margin: 0;  
+    padding: 0;  
+}  
+
+h1, h2 {  
+    text-align: center; /* Rata tengah teks judul */  
+}  
+
+h1 {  
+    font-size: 32px; /* Ukuran font judul */  
+}  
+
+h2 {  
+    font-size: 24px; /* Ukuran font sub-judul */  
+}  
+
+p {  
+    font-size: 16px; /* Ukuran font untuk paragraf */  
+    text-align: center; /* Rata tengah teks */  
+}  
+
+/* Gaya untuk div */  
+div {  
+    display: inline-block; /* Mengatur div agar berdampingan */  
+    margin: 5px; /* Margin antar div */  
+    padding: 2px; /* Padding di dalam div */  
+    border: 2px solid transparent; /* Membuat batas agar terlihat lebih baik */  
+    background-color: white; /* Latar belakang putih untuk div */  
+    text-align: center; /* Rata tengah teks dalam div */  
+}  
+
+/* Gaya untuk gambar dalam div */  
+div img {  
+    width: 100%; /* Mengambil lebar penuh dari div */  
+    max-height: 30vh; /* Membatasi tinggi maksimum gambar */  
+}  
+
+/* Media query untuk layar di bawah 772px */  
+@media (max-width: 772px) {  
+    div {  
+        width: 100%; /* Mengatur lebar div menjadi 100% untuk 1x9 */  
+    }  
+}  
+
+/* Media query kedua: antara 772px dan 998px */  
+@media (min-width: 773px) and (max-width: 998px) {  
+    div {  
+        width: 45%; /* Mengatur lebar div menjadi 45% (2 kolom, 5 div per baris) */  
+    }  
+}  
+
+/* Media query untuk layar lebih besar dari 998px */  
+@media (min-width: 999px) {  
+    div {  
+        width: 30%; /* Mengatur lebar div menjadi 30% (3 kolom, 3 div per baris) */  
+    }  
+}  
+
+/* Footer styling */  
+footer {  
+    text-align: center; /* Rata tengah teks footer */  
+    margin-top: 20px; /* Jarak atas footer */  
+    padding: 10px; /* Padding di dalam footer */  
+}
