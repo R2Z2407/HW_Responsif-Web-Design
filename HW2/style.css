@@ -1,0 +1,176 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #dedede;
+    padding: 5px;
+    margin: 15px;
+    font-size: 25px;
+    font-family:Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family:Arial, sans-serif;
+    font-size: 1.95em;
+}
+
+h2{
+    text-align:center;
+  }
+main p{
+    text-align: justify; 
+
+}
+li{
+    margin-top: 20px;
+}
+
+img{
+    border: 5px solid blue;
+    border-radius: 35px;
+    width: 100%;
+  }
+
+.label{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 30px;
+}
+figure {
+    position: relative;
+    margin: 10px;
+    padding: 0;
+    aspect-ratio: 1/1;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    border: 5px solid blue;
+    border-radius: 35px;
+}
+img {
+    width: 100%;
+    height: calc(100% - 10px);
+    object-fit: cover;
+    display: block;
+    border: none;
+    border-radius: 0px;
+}
+figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: white;
+    color: black; 
+    padding: 8px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 40px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-top: 5px solid blue;
+}
+@media screen and (min-width: 772px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        align-items:stretch;
+        align-self:stretch;
+    }
+    
+    figure {
+        border-radius: 50%;
+    }
+    
+    figure:last-child {
+        grid-column: span 2;
+        aspect-ratio: 2/1; 
+
+    }
+}
+@media screen and (min-width: 992px) {
+    figure {
+        border-radius: 0;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+    figure:nth-child(3n) {
+        grid-column: span 2; 
+        aspect-ratio: 2/1;
+    }
+}
+@media (prefers-reduced-motion) {
+    html {
+        scroll-behavior: auto; /* Menghapus scroll behavior */
+    }
+}
+@media (prefers-color-scheme: dark) {
+    figure {
+        background-color: #222; /* Warna latar belakang gelap */
+        border-color: black; /* Warna border hitam */
+    }
+    
+    figcaption {
+        color: yellow; /* Warna font terang kekuningan */
+        background-color: black;
+    }
+}
+footer {  
+    text-align: center;  
+    margin-top: 15px;  
+    padding: 5px;  
+    
+    /* Styling button-like */  
+    background-color: #3498db;  /* Warna biru modern */  
+    color: white;  /* Teks putih */  
+    border: none;  
+    border-radius: 20px;  /* Sudut membulat */  
+    
+    /* Efek hover */  
+    transition: all 0.3s ease;  
+    cursor: pointer;  
+    
+    /* Shadow untuk kesan kedalaman */  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+    
+    /* Tambahan efek */  
+    transform: scale(0.95);  /* Sedikit mengecil */  
+}  
+
+footer:hover {  
+    background-color: #2980b9;  /* Warna biru gelap saat dihover */  
+    transform: scale(0.5);  /* Kembali ke ukuran normal */  
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);  
+}  
+
+/* Animasi tambahan */  
+footer:active {  
+    transform: scale(0.8);  /* Menekan saat diklik */  
+}  
+
+/* Tambahan untuk link */  
+footer a {  
+    text-decoration: none;  /* Menghilangkan garis bawah */  
+    color: inherit;  /* Mengambil warna dari parent (footer) */  
+}  
+
+footer a:link,  
+footer a:visited {  
+    color: inherit;  /* Warna sama untuk link dan yang sudah dikunjungi */  
+    text-decoration: none;  /* Tanpa garis bawah */  
+}  
+
+footer a:hover {  
+    text-decoration: underline;  /* Opsional: beri garis bawah saat dihover */  
+    opacity: 0.8;  /* Efek sedikit transparan saat dihover */  
+}
